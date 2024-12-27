@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4facfe, #00f2fe);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            color: #4facfe;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #00f2fe;
+            color: #fff;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oi, você quer sair comigo?</h1>
+        <p>Pensei em algo especial para nós dois!</p>
+        <div class="buttons">
+            <button id="yes-btn" onclick="acceptInvite()">Sim</button>
+            <button id="no-btn" onmouseover="hideNoButton()">Não</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptInvite() {
+            alert("Que bom! Vai ser incrível. 🥰");
+        }
+
+        function hideNoButton() {
+            const noButton = document.getElementById("no-btn");
+            noButton.classList.add("hide");
+            setTimeout(() => {
+                alert("Ops, parece que só tem uma escolha agora... 😉");
+            }, 500);
+        }
+    </script>
+</body>
+</html>
