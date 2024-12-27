@@ -49,8 +49,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Oi, você quer sair comigo?</h1>
-        <p>Pensei em algo especial para nós dois!</p>
+        <h1>Oi, você quer passar dias incriveis num airbnb incrivel comigo?</h1>
+        <p>Pensei em algo com muito vinho, macarrão e jacuzzi para nós duas!</p>
         <div class="buttons">
             <button id="yes-btn" onclick="acceptInvite()">Sim</button>
             <button id="no-btn" onmouseover="hideNoButton()">Não</button>
@@ -59,15 +59,17 @@
 
     <script>
         function acceptInvite() {
-            alert("Que bom! Vai ser incrível. 🥰");
+            alert("Ufa! 🥰");
         }
 
         function hideNoButton() {
             const noButton = document.getElementById("no-btn");
-            noButton.classList.add("hide");
+            // Exibe o alerta antes de esconder o botão
+            alert("Ops, parece que só tem uma escolha agora... 😉");
+            // Adiciona a classe para esconder o botão após um pequeno tempo
             setTimeout(() => {
-                alert("Ops, parece que só tem uma escolha agora... 😉");
-            }, 500);
+                noButton.classList.add("hide");
+            }, 500); // 500ms de delay para exibir o alerta antes de esconder
         }
     </script>
 </body>
