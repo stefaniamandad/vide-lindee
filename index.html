@@ -5,87 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convite Especial</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #4facfe, #00f2fe);
+            color: #fff;
+            text-align: center;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #f9f9f9;
-            color: #333;
-            text-align: center;
-        }
-
         .container {
-            max-width: 600px;
+            margin-top: 20vh;
             padding: 20px;
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
         h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
-            color: #444;
         }
-
         p {
             font-size: 1.2em;
-            margin-bottom: 20px;
-            color: #555;
+            margin-bottom: 30px;
         }
-
-        .photos {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .photos img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
         .buttons {
             display: flex;
-            gap: 20px;
             justify-content: center;
+            gap: 20px;
         }
-
         button {
             padding: 10px 20px;
             font-size: 1em;
             border: none;
             border-radius: 5px;
-            background: #4facfe;
-            color: #fff;
+            background: #fff;
+            color: #4facfe;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
-
         button:hover {
             background: #00f2fe;
+            color: #fff;
         }
-
-        #no-btn {
-            background: #e74c3c;
-        }
-
-        #no-btn:hover {
-            background: #c0392b;
-        }
-
         .hide {
             display: none;
         }
@@ -93,13 +54,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Oi, você quer passar dias incríveis num Airbnb incrível comigo?</h1>
+        <h1>Oi, você quer passar dias incríveis comigo?</h1>
         <p>Pensei em algo com muito vinho, macarrão e jacuzzi para nós duas!</p>
-        <div class="photos">
-            <img src="/mnt/data/WhatsApp Image 2024-12-26 at 21.20.07 (1).jpeg" alt="Foto 1">
-            <img src="/mnt/data/WhatsApp Image 2024-12-26 at 21.20.06 (1).jpeg" alt="Foto 2">
-            <img src="/mnt/data/WhatsApp Image 2024-12-26 at 21.20.06.jpeg" alt="Foto 3">
-        </div>
         <div class="buttons">
             <button id="yes-btn" onclick="acceptInvite()">Sim</button>
             <button id="no-btn" onmouseover="hideNoButton()">Não</button>
@@ -108,15 +64,17 @@
 
     <script>
         function acceptInvite() {
-            alert("Ufa! 🥰");
+            alert("Ufa! Vamos decidir os dias 🥰");
         }
 
         function hideNoButton() {
             const noButton = document.getElementById("no-btn");
+            // Exibe o alerta antes de esconder o botão
             alert("Ops, parece que só tem uma escolha agora... 😉");
+            // Adiciona a classe para esconder o botão após um pequeno tempo
             setTimeout(() => {
                 noButton.classList.add("hide");
-            }, 500);
+            }, 500); // 500ms de delay para exibir o alerta antes de esconder
         }
     </script>
 </body>
